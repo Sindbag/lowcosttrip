@@ -60,7 +60,7 @@ class PlanTableViewController: UITableViewController {
 
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showDetail" {
+        if segue.identifier == "Show" {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let airport: Airport
                 if isFiltering {
