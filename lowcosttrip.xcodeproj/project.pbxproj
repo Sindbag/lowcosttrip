@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8417BC83266400BE0092A704 /* Airports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417BC82266400BE0092A704 /* Airports.swift */; };
+		8417BC882664010E0092A704 /* PlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417BC872664010E0092A704 /* PlanViewController.swift */; };
+		8417BC8D266405650092A704 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417BC8C266405650092A704 /* DetailViewController.swift */; };
 		8472227E265C3E04003236AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472227D265C3E04003236AA /* AppDelegate.swift */; };
 		84722280265C3E04003236AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472227F265C3E04003236AA /* SceneDelegate.swift */; };
 		84722282265C3E04003236AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84722281265C3E04003236AA /* ViewController.swift */; };
@@ -36,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8417BC82266400BE0092A704 /* Airports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airports.swift; sourceTree = "<group>"; };
+		8417BC872664010E0092A704 /* PlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanViewController.swift; sourceTree = "<group>"; };
+		8417BC8C266405650092A704 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8472227A265C3E04003236AA /* lowcosttrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lowcosttrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8472227D265C3E04003236AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8472227F265C3E04003236AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8417BC81266400A10092A704 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8417BC82266400BE0092A704 /* Airports.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		84722271265C3E04003236AA = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +115,7 @@
 		8472227C265C3E04003236AA /* lowcosttrip */ = {
 			isa = PBXGroup;
 			children = (
+				8417BC81266400A10092A704 /* Models */,
 				8472227D265C3E04003236AA /* AppDelegate.swift */,
 				8472227F265C3E04003236AA /* SceneDelegate.swift */,
 				84722281265C3E04003236AA /* ViewController.swift */,
@@ -109,6 +124,8 @@
 				84722288265C3E06003236AA /* LaunchScreen.storyboard */,
 				8472228B265C3E06003236AA /* Info.plist */,
 				848300762661355500763099 /* MapViewController.swift */,
+				8417BC872664010E0092A704 /* PlanViewController.swift */,
+				8417BC8C266405650092A704 /* DetailViewController.swift */,
 			);
 			path = lowcosttrip;
 			sourceTree = "<group>";
@@ -263,8 +280,11 @@
 			files = (
 				84722282265C3E04003236AA /* ViewController.swift in Sources */,
 				8472227E265C3E04003236AA /* AppDelegate.swift in Sources */,
+				8417BC83266400BE0092A704 /* Airports.swift in Sources */,
 				84722280265C3E04003236AA /* SceneDelegate.swift in Sources */,
 				848300772661355500763099 /* MapViewController.swift in Sources */,
+				8417BC882664010E0092A704 /* PlanViewController.swift in Sources */,
+				8417BC8D266405650092A704 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

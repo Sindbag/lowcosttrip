@@ -27,11 +27,11 @@
             </objects>
             <point key="canvasLocation" x="-1626" y="-841"/>
         </scene>
-        <!--Item-->
+        <!--Map-->
         <scene sceneID="RQW-Bi-f0U">
             <objects>
                 <navigationController id="CuT-gg-aWE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="uAa-k5-f91"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="map.fill" catalog="system" id="uAa-k5-f91"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wlu-0V-Oew">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -74,11 +74,59 @@
             </objects>
             <point key="canvasLocation" x="-2399" y="736"/>
         </scene>
-        <!--Item-->
+        <!--Аэропорты-->
+        <scene sceneID="g3c-x1-hQq">
+            <objects>
+                <tableViewController id="J27-9L-Cga" customClass="PlanTableViewController" customModule="lowcosttrip" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="jCQ-lO-q0T">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="pH4-5P-N4Q" detailTextLabel="yI8-eC-2vV" style="IBUITableViewCellStyleSubtitle" id="Qz4-LF-ORU">
+                                <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qz4-LF-ORU" id="vBV-0j-UvR">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pH4-5P-N4Q">
+                                            <rect key="frame" x="20" y="10" width="33" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yI8-eC-2vV">
+                                            <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="MZj-Ku-9aH" kind="showDetail" identifier="showDetail" id="gpI-vB-9KK"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="J27-9L-Cga" id="hYL-AT-H4k"/>
+                            <outlet property="delegate" destination="J27-9L-Cga" id="w9e-4r-Bop"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Аэропорты" id="kVB-wR-JJD"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a9S-5G-AkG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1626" y="736"/>
+        </scene>
+        <!--Messages-->
         <scene sceneID="Hrz-Je-G5j">
             <objects>
                 <navigationController id="YjB-zb-9eS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="JVo-zx-Gzg"/>
+                    <tabBarItem key="tabBarItem" title="Messages" image="message.fill" catalog="system" id="JVo-zx-Gzg"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ur2-Tf-b6H">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -91,24 +139,24 @@
             </objects>
             <point key="canvasLocation" x="-871" y="-79"/>
         </scene>
-        <!--Item-->
+        <!--Plan-->
         <scene sceneID="cLF-WI-wsj">
             <objects>
                 <navigationController id="ioD-DU-RNv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Eh4-uk-r2l"/>
+                    <tabBarItem key="tabBarItem" title="Plan" image="pencil" catalog="system" id="Eh4-uk-r2l"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mi1-8q-ONR">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="zTl-5y-vTf" kind="relationship" relationship="rootViewController" id="Bht-mI-bmD"/>
+                        <segue destination="J27-9L-Cga" kind="relationship" relationship="rootViewController" id="HJd-1N-sjk"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nmh-VM-Bq9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1626" y="-79"/>
         </scene>
-        <!--View Controller-->
+        <!--Сообщения-->
         <scene sceneID="KU7-Fe-ZIi">
             <objects>
                 <viewController id="MGl-tZ-4tn" sceneMemberID="viewController">
@@ -118,30 +166,33 @@
                         <viewLayoutGuide key="safeArea" id="s4M-ed-CU4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="wfl-aZ-BId"/>
+                    <navigationItem key="navigationItem" title="Сообщения" id="wfl-aZ-BId"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zie-zS-eJ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-871" y="736"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="13E-hu-kgB">
+        <!--Detail View Controller-->
+        <scene sceneID="TRy-Iv-snw">
             <objects>
-                <viewController id="zTl-5y-vTf" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="kHy-Ew-Lts">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <viewController storyboardIdentifier="DetailViewController" id="MZj-Ku-9aH" customClass="DetailViewController" customModule="lowcosttrip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rg0-Ss-H6m">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="GS0-4s-jzU"/>
+                        <viewLayoutGuide key="safeArea" id="26C-hN-QDQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="nLH-Yp-ftI"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tmW-vT-IrU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationItem title="Restaurant Name" largeTitleDisplayMode="always" id="Ups-Je-CIa"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bVZ-DE-3jQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1626" y="736"/>
+            <point key="canvasLocation" x="-1626" y="1440"/>
         </scene>
     </scenes>
     <resources>
+        <image name="map.fill" catalog="system" width="128" height="110"/>
+        <image name="message.fill" catalog="system" width="128" height="113"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
