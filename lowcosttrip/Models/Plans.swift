@@ -36,4 +36,20 @@ class Plan: NSObject, NSCoding {
         aCoder.encode(flight, forKey: "flight")
         aCoder.encode(exposeMyself, forKey: "exposeMyself")
     }
+    
+    func save(key: Int) {
+        do {
+            let encodedData = try NSKeyedArchiver.archivedData(
+                withRootObject: Plan(from: self.from, to: self.to, flight: self.flight, exposeMyself: self.exposeMyself),
+                requiringSecureCoding: false
+            )
+            UserDefaults().set(
+                encodedData,
+                forKey: "plan_\(key)"
+            )
+        } catch {
+            print("archiving")
+            return
+        }
+    }
 }

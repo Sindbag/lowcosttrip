@@ -16,6 +16,7 @@ class PlanViewController: UIViewController {
     @IBOutlet var fromButtom: UIButton!
     
     var plan: Plan?
+    var planId: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,11 +25,31 @@ class PlanViewController: UIViewController {
         from.text = plan?.from
         to.text = plan?.to
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Expose", style: .done, target: self, action: #selector(exposeSelf))
+        var buttonTitle: String
+        if plan != nil && plan!.exposeMyself {
+            buttonTitle = "Hide"
+        } else {
+            buttonTitle = "Expose"
+        }
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: buttonTitle, style: .done, target: self, action: #selector(exposeSelf))
     }
     
     @objc func exposeSelf() {
-        // TODO: add function to trigger exposure
+        
+        var buttonTitle: String
+        plan!.exposeMyself = !(plan != nil && plan!.exposeMyself)
+        if plan != nil && plan!.exposeMyself {
+            buttonTitle = "Hide"
+        } else {
+            buttonTitle = "Expose"
+        }
+        
+        if planId != nil {
+            plan!.save(key: planId!)
+        }
+        
+        navigationItem.rightBarButtonItem!.title = buttonTitle
     }
     
     func getFiltered(filter: String) -> [Airport] {

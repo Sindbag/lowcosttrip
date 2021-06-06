@@ -69,6 +69,7 @@ class PlansTableViewController: UITableViewController {
         let vc = storyboard?.instantiateViewController(identifier: "plan") as! PlanViewController
         vc.title = plans[indexPath.row].flight
         vc.plan = plans[indexPath.row]
+        vc.planId = indexPath.row
         navigationController?.pushViewController(vc, animated: true)
     }
     
