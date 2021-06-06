@@ -1,0 +1,36 @@
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Chl-mV-2Du"; */
+"Chl-mV-2Du.normalTitle" = "List";
+
+/* Class = "UITabBarItem"; title = "Plan"; ObjectID = "Eh4-uk-r2l"; */
+"Eh4-uk-r2l.title" = "Plan";
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "GNs-Se-KEo"; */
+"GNs-Se-KEo.title" = "Title";
+
+/* Class = "UITabBarItem"; title = "Messages"; ObjectID = "JVo-zx-Gzg"; */
+"JVo-zx-Gzg.title" = "Messages";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "LeR-P8-cJZ"; */
+"LeR-P8-cJZ.normalTitle" = "List";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "MQB-6X-bEN"; */
+"MQB-6X-bEN.text" = "Title";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "kOv-M3-4Rn"; */
+"kOv-M3-4Rn.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Аэропорты"; ObjectID = "kVB-wR-JJD"; */
+"kVB-wR-JJD.title" = "Аэропорты";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "pH4-5P-N4Q"; */
+"pH4-5P-N4Q.text" = "Title";
+
+/* Class = "UITabBarItem"; title = "Map"; ObjectID = "uAa-k5-f91"; */
+"uAa-k5-f91.title" = "Map";
+
+/* Class = "UINavigationItem"; title = "Сообщения"; ObjectID = "wfl-aZ-BId"; */
+"wfl-aZ-BId.title" = "Сообщения";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "yI8-eC-2vV"; */
+"yI8-eC-2vV.text" = "Subtitle";

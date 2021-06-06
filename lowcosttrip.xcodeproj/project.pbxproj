@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8417BC83266400BE0092A704 /* Airports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417BC82266400BE0092A704 /* Airports.swift */; };
-		8417BC882664010E0092A704 /* PlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417BC872664010E0092A704 /* PlanViewController.swift */; };
+		8417BC882664010E0092A704 /* AirportsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417BC872664010E0092A704 /* AirportsListViewController.swift */; };
 		8417BC8D266405650092A704 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417BC8C266405650092A704 /* DetailViewController.swift */; };
 		8472227E265C3E04003236AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472227D265C3E04003236AA /* AppDelegate.swift */; };
 		84722280265C3E04003236AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472227F265C3E04003236AA /* SceneDelegate.swift */; };
@@ -19,6 +19,10 @@
 		84722295265C3E06003236AA /* lowcosttripTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84722294265C3E06003236AA /* lowcosttripTests.swift */; };
 		847222A0265C3E06003236AA /* lowcosttripUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472229F265C3E06003236AA /* lowcosttripUITests.swift */; };
 		848300772661355500763099 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848300762661355500763099 /* MapViewController.swift */; };
+		9A446CC3266C28530069A50F /* PlansTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A446CC2266C28530069A50F /* PlansTableViewController.swift */; };
+		9A446CC8266C28760069A50F /* Plans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A446CC7266C28760069A50F /* Plans.swift */; };
+		9A446CCD266C2BDD0069A50F /* AddPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A446CCC266C2BDD0069A50F /* AddPlanViewController.swift */; };
+		9A446CD2266C2BF70069A50F /* PlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A446CD1266C2BF70069A50F /* PlanViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +44,7 @@
 
 /* Begin PBXFileReference section */
 		8417BC82266400BE0092A704 /* Airports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airports.swift; sourceTree = "<group>"; };
-		8417BC872664010E0092A704 /* PlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanViewController.swift; sourceTree = "<group>"; };
+		8417BC872664010E0092A704 /* AirportsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsListViewController.swift; sourceTree = "<group>"; };
 		8417BC8C266405650092A704 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8472227A265C3E04003236AA /* lowcosttrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lowcosttrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8472227D265C3E04003236AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +61,11 @@
 		8472229F265C3E06003236AA /* lowcosttripUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lowcosttripUITests.swift; sourceTree = "<group>"; };
 		847222A1265C3E06003236AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		848300762661355500763099 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		9A446CB3266C07E70069A50F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		9A446CC2266C28530069A50F /* PlansTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlansTableViewController.swift; sourceTree = "<group>"; };
+		9A446CC7266C28760069A50F /* Plans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plans.swift; sourceTree = "<group>"; };
+		9A446CCC266C2BDD0069A50F /* AddPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlanViewController.swift; sourceTree = "<group>"; };
+		9A446CD1266C2BF70069A50F /* PlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				8417BC82266400BE0092A704 /* Airports.swift */,
+				9A446CC7266C28760069A50F /* Plans.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -124,7 +134,10 @@
 				84722288265C3E06003236AA /* LaunchScreen.storyboard */,
 				8472228B265C3E06003236AA /* Info.plist */,
 				848300762661355500763099 /* MapViewController.swift */,
-				8417BC872664010E0092A704 /* PlanViewController.swift */,
+				8417BC872664010E0092A704 /* AirportsListViewController.swift */,
+				9A446CC2266C28530069A50F /* PlansTableViewController.swift */,
+				9A446CD1266C2BF70069A50F /* PlanViewController.swift */,
+				9A446CCC266C2BDD0069A50F /* AddPlanViewController.swift */,
 				8417BC8C266405650092A704 /* DetailViewController.swift */,
 			);
 			path = lowcosttrip;
@@ -281,9 +294,13 @@
 				84722282265C3E04003236AA /* ViewController.swift in Sources */,
 				8472227E265C3E04003236AA /* AppDelegate.swift in Sources */,
 				8417BC83266400BE0092A704 /* Airports.swift in Sources */,
+				9A446CCD266C2BDD0069A50F /* AddPlanViewController.swift in Sources */,
 				84722280265C3E04003236AA /* SceneDelegate.swift in Sources */,
+				9A446CC8266C28760069A50F /* Plans.swift in Sources */,
 				848300772661355500763099 /* MapViewController.swift in Sources */,
-				8417BC882664010E0092A704 /* PlanViewController.swift in Sources */,
+				9A446CD2266C2BF70069A50F /* PlanViewController.swift in Sources */,
+				8417BC882664010E0092A704 /* AirportsListViewController.swift in Sources */,
+				9A446CC3266C28530069A50F /* PlansTableViewController.swift in Sources */,
 				8417BC8D266405650092A704 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,6 +341,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				84722284265C3E04003236AA /* Base */,
+				9A446CB3266C07E70069A50F /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

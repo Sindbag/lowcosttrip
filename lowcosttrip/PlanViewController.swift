@@ -2,93 +2,64 @@
 //  PlanViewController.swift
 //  lowcosttrip
 //
-//  Created by Admin on 30.05.2021.
+//  Created by Anatoly Bardukov on 06/06/2021.
 //
 
 import UIKit
 
-class PlanTableViewController: UITableViewController {
+class PlanViewController: UIViewController {
 
-    var filteredAirports = [Airport]()
+    @IBOutlet var label: UILabel!
+    @IBOutlet var from: UILabel!
+    @IBOutlet var to: UILabel!
+    @IBOutlet var toButton: UIButton!
+    @IBOutlet var fromButtom: UIButton!
     
-    private let searchController = UISearchController(searchResultsController: nil)
+    var plan: Plan?
     
-    private var searchBarIsEmpty: Bool {
-        guard let text = searchController.searchBar.text else { return false }
-        return text.isEmpty
-    }
-    
-    private var isFiltering: Bool {
-        return searchController.isActive && !searchBarIsEmpty
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Setup the Search Controller
-        searchController.searchResultsUpdater = self
-        searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search"
-        navigationItem.searchController = searchController
-        definesPresentationContext = true
-    }
-
-    // MARK: - Table view data source
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if isFiltering {
-            return filteredAirports.count
-        }
-        return airports.count
-    }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        label.text = plan?.flight
+        from.text = plan?.from
+        to.text = plan?.to
         
-        var airport: Airport
-        
-        if isFiltering {
-            airport = filteredAirports[indexPath.row]
-        } else {
-            airport = airports[indexPath.row]
-        }
-
-        cell.textLabel?.text = airport.name
-        cell.detailTextLabel?.text = airport.shortname
-
-        return cell
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Expose", style: .done, target: self, action: #selector(exposeSelf))
     }
-
-    // MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "Show" {
-            if let indexPath = tableView.indexPathForSelectedRow {
-                let airport: Airport
-                if isFiltering {
-                    airport = filteredAirports[indexPath.row]
-                } else {
-                    airport = airports[indexPath.row]
-                }
-                let detailVC = segue.destination as! DetailViewController
-                detailVC.airport = airport
+    
+    @objc func exposeSelf() {
+        // TODO: add function to trigger exposure
+    }
+    
+    func getFiltered(filter: String) -> [Airport] {
+        let filteredAirports = airports.filter({ (airport: Airport) -> Bool in
+            return (airport.name.lowercased().contains(filter.lowercased()) || airport.shortname.lowercased().contains(filter.lowercased()) )
+        })
+        return filteredAirports
+    }
+    
+    @IBAction func goToFrom() {
+        if (plan != nil) {
+            let filteredFrom = getFiltered(filter: plan!.from)
+            if filteredFrom.count > 0 {
+                let vc = storyboard?.instantiateViewController(identifier: "airport") as! DetailViewController
+                vc.title = filteredFrom.first!.name
+                vc.airport = filteredFrom.first!
+                navigationController?.pushViewController(vc, animated: true)
             }
         }
     }
-
-}
-
-// MARK: - UISearchResultsUpdating Delegate
-extension PlanTableViewController: UISearchResultsUpdating {
     
-    func updateSearchResults(for searchController: UISearchController) {
-        filterContentForSearchText(searchController.searchBar.text!)
+    @IBAction func goToTo() {
+        if (plan != nil) {
+            let filteredFrom = getFiltered(filter: plan!.to)
+            if filteredFrom.count > 0 {
+                let vc = storyboard?.instantiateViewController(identifier: "airport") as! DetailViewController
+                vc.title = filteredFrom.first!.name
+                vc.airport = filteredFrom.first!
+                navigationController?.pushViewController(vc, animated: true)
+            }
+        }
     }
     
-    private func filterContentForSearchText(_ searchText: String) {
-        
-        filteredAirports = airports.filter({ (airport: Airport) -> Bool in
-            return (airport.name.lowercased().contains(searchText.lowercased()) || airport.shortname.lowercased().contains(searchText.lowercased()) )
-        })
-        
-        tableView.reloadData()
-    }
 }
